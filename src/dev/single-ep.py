@@ -12,7 +12,7 @@ from _functions import *
 
 root = tk.Tk()
 root.geometry("600x400")  # Set the window size to 600x400
-root.title("Update BEMA Transcripts")
+root.title("Update Transcripts")
 
 ## area for From and To
 ep_from = tk.Text(root, height=1, width=6)  # Create the text area widget

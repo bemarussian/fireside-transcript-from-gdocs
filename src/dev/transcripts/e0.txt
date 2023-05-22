@@ -1,8 +1,17 @@
+
+
+
+
 Transcript for ep 0
 
 
 
 This is a test 
 
-Updated 01
+Updated 02
 
+
+
+
+
+ But what I noticed is that, I mean, we're doing a lot of great stuff. I mean, what we're doing to support and so on. But the backlog is getting empty because we're doing things. But I mean, instead of, as you mentioned, being reactive, versus proactive, yes. So I think that's, it's yet another approach. So what we did is, let me just bring up the mirror here. So what we had is, I mean, just kind of a brainstorming. So I maybe can just do the introduction for you, what we have already discussed. And just to see if that makes sense and maybe you have already have few ideas, just we haven't put them somewhere yet. And maybe I can give some comments on this crazy thing. So we discussed a few different perspectives. So one of them is the idea that when we started the project, back in 2018, right? So I believe that all the best technology we had in Asia Cloud, and whatever was available on the application side, we implemented in the platform. So I mean, I have to trust that, I mean, the decisions we made, they were best at that time. And then we started rollout and we migrated things. There were no time to consider and discuss any improvements. I mean, we had very like tight schedule, so we had to deliver. So we deployed everything, now time has passed. And I mean, the decision made then were good and right. But probably, since Microsoft has developed their services and we have some opportunities to now think of what happened then. Maybe we can take a look and discuss, I mean, if there are any things we can take out of the like implement. And we have already few examples like we did the firewall premium migration, right? Like new versions of the virtual machines. We did the, what is that? Microsoft Defender for Linux. I mean, even in just in security, it was a lot. Now, there are things outside the security which might be relevant. So what I did is I parsed the Azure blog. So for the last five years, it was 2500 different articles, announcements and stuff like that. And those announcements, they have tags. So let me just bring this up. Let's see. Azure blog. Yeah, I think I put this in the. So let's take any of this. Yeah, so some, some article, right? And down below, you have different tags.

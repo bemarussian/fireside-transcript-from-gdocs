@@ -7,7 +7,7 @@ Usage:
 
 from setuptools import setup
 
-APP = ['.py']
+APP = ['single-ep.py']
 DATA_FILES = []
 OPTIONS = {}
 

@@ -4,5 +4,17 @@ Transcript for ep 001
 
 This is a test 
 
-Updated 01
+Updated 02
+
+
+
+Let's imagine you need to analyze a launch number of blog posts. And those blog posts, they have tags. They have Title. But the title is not exactly clear what the blog post is about. So what you would like to do is you can condense. And you would like. To have someone to read the article. And in few words, like literally in three, four words, summarize what this article blog is about. And this is the perfect application for generative AI, like chat GPT. Or open AI. 
+
+And what we will be doing, we will be doing exactly that. We will parse the Microsoft blog. We will get out all tags, all blog post titles. But we will also summarize each blog post with the help of open AI. And we will provide condensed summary of the blog post. And then we will be using the word cloud to extract the most interesting areas for our project. So if you have any more questions, please contact me on my webcast. 
+
+Okay, we will go a quick round through the automation. I will start from the overall loop and then we will go into different areas of this loop. So we have different years for the posts. 
+
+
+
+
 
