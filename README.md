@@ -1,4 +1,6 @@
-# fireside-transcript-from-gdocs
+# Fireside transcript from Google Docs
+
+[Watch on Youtube](https://youtu.be/MO5z1oYoVZw)
 
 ## Background
 I have a podcast on the Fireside platform, and for each episode on Fireside, I want to add transcripts. The problem I see is that if I have a link to a transcript stored in Google Drive, those transcripts are not indexed by search engines. This means that if someone searches for certain words or themes discussed in the podcast, they will not be available for users to search. As a result, the discoverability of my podcast will suffer. However, I would like to keep my Google documents on Google Drive because I have multiple users helping me with these transcriptions, and I want to utilize the Google Docs functionality to allow those users to work on the transcripts. Then, I can publish those transcripts on the web and link to the published versions instead. But how can I address the issue of discoverability?
