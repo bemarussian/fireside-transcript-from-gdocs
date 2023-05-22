@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on darwin)" generated="20230522 03:11:35.889" rpa="false" schemaversion="3">
+<suite id="s1" name="Robot Actions" source="/Users/sergey/Documents/Python-projects/fireside-transcript-from-gdocs/src/dev/_robot_actions.robot">
+<test id="s1-t1" name="Login to Fireside.fm" line="38">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<var>${speed}</var>
+<arg>${speed}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<msg timestamp="20230522 03:11:36.055" level="INFO">${speed} = 0 seconds</msg>
+<status status="PASS" starttime="20230522 03:11:36.055" endtime="20230522 03:11:36.055"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230522 03:11:36.056" level="INFO">Opening browser 'chrome' to base url 'https://app.fireside.fm/login'.</msg>
+<status status="PASS" starttime="20230522 03:11:36.056" endtime="20230522 03:11:42.121"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<var>${speed}</var>
+<arg>${speed}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<msg timestamp="20230522 03:11:42.123" level="INFO">${speed} = 3 seconds</msg>
+<status status="PASS" starttime="20230522 03:11:42.122" endtime="20230522 03:11:42.124"/>
+</kw>
+<kw name="Get xpath">
+<var>${element}</var>
+<arg>login_username</arg>
+<if>
+<branch type="IF" condition="&quot;${element}&quot; == &quot;login_username&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="email"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230522 03:11:42.126" level="INFO">${res} = xpath=//*[@id="email"]</msg>
+<status status="PASS" starttime="20230522 03:11:42.126" endtime="20230522 03:11:42.126"/>
+</kw>
+<status status="PASS" starttime="20230522 03:11:42.125" endtime="20230522 03:11:42.126"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_pass&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="password"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.126" endtime="20230522 03:11:42.126"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.126" endtime="20230522 03:11:42.126"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_button&quot;">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${res}</var>
+<arg>xpath=//*[@type="submit"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.126" endtime="20230522 03:11:42.126"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.126" endtime="20230522 03:11:42.126"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;welcome_content&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@data-dismiss="alert"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.127" endtime="20230522 03:11:42.127"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.126" endtime="20230522 03:11:42.127"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_panel&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@aria-controls="transcript-panel"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.127" endtime="20230522 03:11:42.127"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.127" endtime="20230522 03:11:42.127"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_upload&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="transcript_upload_url"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.127" endtime="20230522 03:11:42.127"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.127" endtime="20230522 03:11:42.127"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;episode_form_submit_button&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="episode_form_submit_button"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.127" endtime="20230522 03:11:42.128"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.127" endtime="20230522 03:11:42.128"/>
+</branch>
+<status status="PASS" starttime="20230522 03:11:42.125" endtime="20230522 03:11:42.128"/>
+</if>
+<msg timestamp="20230522 03:11:42.128" level="INFO">${element} = xpath=//*[@id="email"]</msg>
+<status status="PASS" starttime="20230522 03:11:42.124" endtime="20230522 03:11:42.128"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 03:11:42.129" level="INFO">Typing text 'sergbaz@gmail.com' into text field 'xpath=//*[@id="email"]'.</msg>
+<status status="PASS" starttime="20230522 03:11:42.128" endtime="20230522 03:11:42.292"/>
+</kw>
+<kw name="Get xpath">
+<var>${element}</var>
+<arg>login_pass</arg>
+<if>
+<branch type="IF" condition="&quot;${element}&quot; == &quot;login_username&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="email"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.293" endtime="20230522 03:11:42.293"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.293" endtime="20230522 03:11:42.293"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_pass&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="password"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230522 03:11:42.294" level="INFO">${res} = xpath=//*[@id="password"]</msg>
+<status status="PASS" starttime="20230522 03:11:42.293" endtime="20230522 03:11:42.294"/>
+</kw>
+<status status="PASS" starttime="20230522 03:11:42.293" endtime="20230522 03:11:42.294"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_button&quot;">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${res}</var>
+<arg>xpath=//*[@type="submit"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.294" endtime="20230522 03:11:42.294"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.294" endtime="20230522 03:11:42.294"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;welcome_content&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@data-dismiss="alert"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.294" endtime="20230522 03:11:42.294"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.294" endtime="20230522 03:11:42.294"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_panel&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@aria-controls="transcript-panel"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.294" endtime="20230522 03:11:42.294"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.294" endtime="20230522 03:11:42.294"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_upload&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="transcript_upload_url"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.294" endtime="20230522 03:11:42.294"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.294" endtime="20230522 03:11:42.294"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;episode_form_submit_button&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="episode_form_submit_button"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.294" endtime="20230522 03:11:42.294"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.294" endtime="20230522 03:11:42.294"/>
+</branch>
+<status status="PASS" starttime="20230522 03:11:42.293" endtime="20230522 03:11:42.294"/>
+</if>
+<msg timestamp="20230522 03:11:42.294" level="INFO">${element} = xpath=//*[@id="password"]</msg>
+<status status="PASS" starttime="20230522 03:11:42.293" endtime="20230522 03:11:42.295"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230522 03:11:42.295" level="INFO">Typing password into text field 'xpath=//*[@id="password"]'.</msg>
+<msg timestamp="20230522 03:11:42.334" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230522 03:11:42.387" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230522 03:11:42.295" endtime="20230522 03:11:42.388"/>
+</kw>
+<kw name="Get xpath">
+<var>${element}</var>
+<arg>login_button</arg>
+<if>
+<branch type="IF" condition="&quot;${element}&quot; == &quot;login_username&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="email"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.388" endtime="20230522 03:11:42.388"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.388" endtime="20230522 03:11:42.388"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_pass&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="password"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.389" endtime="20230522 03:11:42.389"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.388" endtime="20230522 03:11:42.389"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_button&quot;">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${res}</var>
+<arg>xpath=//*[@type="submit"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230522 03:11:42.409" level="INFO">${res} = &lt;selenium.webdriver.remote.webelement.WebElement (session="33392df53f31203232feef74899fea07", element="CC8D8FEB585FF918A372C1EFCF2524BA_element_9")&gt;</msg>
+<status status="PASS" starttime="20230522 03:11:42.389" endtime="20230522 03:11:42.410"/>
+</kw>
+<status status="PASS" starttime="20230522 03:11:42.389" endtime="20230522 03:11:42.410"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;welcome_content&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@data-dismiss="alert"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.410" endtime="20230522 03:11:42.410"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.410" endtime="20230522 03:11:42.410"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_panel&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@aria-controls="transcript-panel"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.410" endtime="20230522 03:11:42.410"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.410" endtime="20230522 03:11:42.410"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_upload&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="transcript_upload_url"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.410" endtime="20230522 03:11:42.410"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.410" endtime="20230522 03:11:42.410"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;episode_form_submit_button&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="episode_form_submit_button"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:42.410" endtime="20230522 03:11:42.410"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:42.410" endtime="20230522 03:11:42.410"/>
+</branch>
+<status status="PASS" starttime="20230522 03:11:42.388" endtime="20230522 03:11:42.410"/>
+</if>
+<msg timestamp="20230522 03:11:42.411" level="INFO">${element} = &lt;selenium.webdriver.remote.webelement.WebElement (session="33392df53f31203232feef74899fea07", element="CC8D8FEB585FF918A372C1EFCF2524BA_element_9")&gt;</msg>
+<status status="PASS" starttime="20230522 03:11:42.388" endtime="20230522 03:11:42.411"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 03:11:42.411" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="33392df53f31203232feef74899fea07", element="CC8D8FEB585FF918A372C1EFCF2524BA_element_9")&gt;'.</msg>
+<status status="PASS" starttime="20230522 03:11:42.411" endtime="20230522 03:11:44.537"/>
+</kw>
+<kw name="Get xpath">
+<var>${element}</var>
+<arg>welcome_content</arg>
+<if>
+<branch type="IF" condition="&quot;${element}&quot; == &quot;login_username&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="email"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:44.538" endtime="20230522 03:11:44.538"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:44.538" endtime="20230522 03:11:44.538"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_pass&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="password"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:44.539" endtime="20230522 03:11:44.539"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:44.538" endtime="20230522 03:11:44.539"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_button&quot;">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${res}</var>
+<arg>xpath=//*[@type="submit"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:44.539" endtime="20230522 03:11:44.539"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:44.539" endtime="20230522 03:11:44.539"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;welcome_content&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@data-dismiss="alert"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230522 03:11:44.539" level="INFO">${res} = xpath=//*[@data-dismiss="alert"]</msg>
+<status status="PASS" starttime="20230522 03:11:44.539" endtime="20230522 03:11:44.540"/>
+</kw>
+<status status="PASS" starttime="20230522 03:11:44.539" endtime="20230522 03:11:44.540"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_panel&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@aria-controls="transcript-panel"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:44.540" endtime="20230522 03:11:44.540"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:44.540" endtime="20230522 03:11:44.540"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_upload&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="transcript_upload_url"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:44.540" endtime="20230522 03:11:44.540"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:44.540" endtime="20230522 03:11:44.540"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;episode_form_submit_button&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="episode_form_submit_button"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:44.540" endtime="20230522 03:11:44.540"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:44.540" endtime="20230522 03:11:44.540"/>
+</branch>
+<status status="PASS" starttime="20230522 03:11:44.538" endtime="20230522 03:11:44.540"/>
+</if>
+<msg timestamp="20230522 03:11:44.540" level="INFO">${element} = xpath=//*[@data-dismiss="alert"]</msg>
+<status status="PASS" starttime="20230522 03:11:44.538" endtime="20230522 03:11:44.540"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20230522 03:11:44.541" endtime="20230522 03:11:44.572"/>
+</kw>
+<status status="PASS" starttime="20230522 03:11:36.054" endtime="20230522 03:11:44.572"/>
+</test>
+<test id="s1-t2" name="Open Episode edit Page" line="57">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<var>${speed}</var>
+<arg>${speed}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<msg timestamp="20230522 03:11:44.574" level="INFO">${speed} = 0 seconds</msg>
+<status status="PASS" starttime="20230522 03:11:44.573" endtime="20230522 03:11:44.574"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${ep_edit_url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230522 03:11:44.574" level="INFO">Opening url 'https://app.fireside.fm/podcasts/transcript-tst/episodes/b0cd4cc6-8f99-4907-89fd-1a001ee75b1f/edit'</msg>
+<status status="PASS" starttime="20230522 03:11:44.574" endtime="20230522 03:11:49.046"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<var>${speed}</var>
+<arg>${speed}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<msg timestamp="20230522 03:11:49.048" level="INFO">${speed} = 3 seconds</msg>
+<status status="PASS" starttime="20230522 03:11:49.047" endtime="20230522 03:11:49.048"/>
+</kw>
+<kw name="Get xpath">
+<var>${element}</var>
+<arg>transcript_panel</arg>
+<if>
+<branch type="IF" condition="&quot;${element}&quot; == &quot;login_username&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="email"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.049" endtime="20230522 03:11:49.049"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.049" endtime="20230522 03:11:49.049"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_pass&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="password"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.050" endtime="20230522 03:11:49.050"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.049" endtime="20230522 03:11:49.050"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_button&quot;">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${res}</var>
+<arg>xpath=//*[@type="submit"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.050" endtime="20230522 03:11:49.050"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.050" endtime="20230522 03:11:49.050"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;welcome_content&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@data-dismiss="alert"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.050" endtime="20230522 03:11:49.051"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.050" endtime="20230522 03:11:49.051"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_panel&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@aria-controls="transcript-panel"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230522 03:11:49.051" level="INFO">${res} = xpath=//*[@aria-controls="transcript-panel"]</msg>
+<status status="PASS" starttime="20230522 03:11:49.051" endtime="20230522 03:11:49.051"/>
+</kw>
+<status status="PASS" starttime="20230522 03:11:49.051" endtime="20230522 03:11:49.051"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_upload&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="transcript_upload_url"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.051" endtime="20230522 03:11:49.051"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.051" endtime="20230522 03:11:49.051"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;episode_form_submit_button&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="episode_form_submit_button"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.051" endtime="20230522 03:11:49.052"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.051" endtime="20230522 03:11:49.052"/>
+</branch>
+<status status="PASS" starttime="20230522 03:11:49.048" endtime="20230522 03:11:49.052"/>
+</if>
+<msg timestamp="20230522 03:11:49.052" level="INFO">${element} = xpath=//*[@aria-controls="transcript-panel"]</msg>
+<status status="PASS" starttime="20230522 03:11:49.048" endtime="20230522 03:11:49.052"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 03:11:49.053" level="INFO">Clicking element 'xpath=//*[@aria-controls="transcript-panel"]'.</msg>
+<status status="PASS" starttime="20230522 03:11:49.053" endtime="20230522 03:11:49.115"/>
+</kw>
+<kw name="Get xpath">
+<var>${element}</var>
+<arg>transcript_upload</arg>
+<if>
+<branch type="IF" condition="&quot;${element}&quot; == &quot;login_username&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="email"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.116" endtime="20230522 03:11:49.116"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.115" endtime="20230522 03:11:49.116"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_pass&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="password"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.116" endtime="20230522 03:11:49.116"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.116" endtime="20230522 03:11:49.116"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_button&quot;">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${res}</var>
+<arg>xpath=//*[@type="submit"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.117" endtime="20230522 03:11:49.117"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.116" endtime="20230522 03:11:49.117"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;welcome_content&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@data-dismiss="alert"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.117" endtime="20230522 03:11:49.117"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.117" endtime="20230522 03:11:49.117"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_panel&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@aria-controls="transcript-panel"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.117" endtime="20230522 03:11:49.117"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.117" endtime="20230522 03:11:49.117"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_upload&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="transcript_upload_url"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230522 03:11:49.117" level="INFO">${res} = xpath=//*[@id="transcript_upload_url"]</msg>
+<status status="PASS" starttime="20230522 03:11:49.117" endtime="20230522 03:11:49.117"/>
+</kw>
+<status status="PASS" starttime="20230522 03:11:49.117" endtime="20230522 03:11:49.117"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;episode_form_submit_button&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="episode_form_submit_button"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.117" endtime="20230522 03:11:49.117"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.117" endtime="20230522 03:11:49.118"/>
+</branch>
+<status status="PASS" starttime="20230522 03:11:49.115" endtime="20230522 03:11:49.118"/>
+</if>
+<msg timestamp="20230522 03:11:49.118" level="INFO">${element} = xpath=//*[@id="transcript_upload_url"]</msg>
+<status status="PASS" starttime="20230522 03:11:49.115" endtime="20230522 03:11:49.118"/>
+</kw>
+<kw name="Choose File" library="SeleniumLibrary">
+<arg>${element}</arg>
+<arg>${ep_transcript_file}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230522 03:11:49.118" level="INFO">Sending /Users/sergey/Documents/Python-projects/fireside-transcript-from-gdocs/src/dev/transcripts/e1.txt to browser.</msg>
+<status status="PASS" starttime="20230522 03:11:49.118" endtime="20230522 03:11:49.185"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Upload Complete!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230522 03:11:49.186" endtime="20230522 03:11:49.204"/>
+</kw>
+<kw name="Get xpath">
+<var>${element}</var>
+<arg>episode_form_submit_button</arg>
+<if>
+<branch type="IF" condition="&quot;${element}&quot; == &quot;login_username&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="email"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.204" endtime="20230522 03:11:49.204"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.204" endtime="20230522 03:11:49.204"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_pass&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="password"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.205" endtime="20230522 03:11:49.205"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.204" endtime="20230522 03:11:49.205"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;login_button&quot;">
+<kw name="Get WebElement" library="SeleniumLibrary">
+<var>${res}</var>
+<arg>xpath=//*[@type="submit"]</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.205" endtime="20230522 03:11:49.205"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.205" endtime="20230522 03:11:49.205"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;welcome_content&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@data-dismiss="alert"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.205" endtime="20230522 03:11:49.205"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.205" endtime="20230522 03:11:49.205"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_panel&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@aria-controls="transcript-panel"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.205" endtime="20230522 03:11:49.205"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.205" endtime="20230522 03:11:49.205"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;transcript_upload&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="transcript_upload_url"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" starttime="20230522 03:11:49.205" endtime="20230522 03:11:49.205"/>
+</kw>
+<status status="NOT RUN" starttime="20230522 03:11:49.205" endtime="20230522 03:11:49.205"/>
+</branch>
+<branch type="ELSE IF" condition="&quot;${element}&quot; == &quot;episode_form_submit_button&quot;">
+<kw name="Set Variable" library="BuiltIn">
+<var>${res}</var>
+<arg>xpath=//*[@id="episode_form_submit_button"]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230522 03:11:49.206" level="INFO">${res} = xpath=//*[@id="episode_form_submit_button"]</msg>
+<status status="PASS" starttime="20230522 03:11:49.205" endtime="20230522 03:11:49.206"/>
+</kw>
+<status status="PASS" starttime="20230522 03:11:49.205" endtime="20230522 03:11:49.206"/>
+</branch>
+<status status="PASS" starttime="20230522 03:11:49.204" endtime="20230522 03:11:49.206"/>
+</if>
+<msg timestamp="20230522 03:11:49.206" level="INFO">${element} = xpath=//*[@id="episode_form_submit_button"]</msg>
+<status status="PASS" starttime="20230522 03:11:49.204" endtime="20230522 03:11:49.206"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<var>${speed}</var>
+<arg>${speed}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<msg timestamp="20230522 03:11:49.206" level="INFO">${speed} = 0 seconds</msg>
+<status status="PASS" starttime="20230522 03:11:49.206" endtime="20230522 03:11:49.206"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${element}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230522 03:11:49.207" level="INFO">Clicking element 'xpath=//*[@id="episode_form_submit_button"]'.</msg>
+<status status="PASS" starttime="20230522 03:11:49.207" endtime="20230522 03:11:58.973"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<var>${speed}</var>
+<arg>${speed}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<msg timestamp="20230522 03:11:58.974" level="INFO">${speed} = 3 seconds</msg>
+<status status="PASS" starttime="20230522 03:11:58.973" endtime="20230522 03:11:58.974"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Episode was successfully updated.</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20230522 03:11:58.974" endtime="20230522 03:11:58.993"/>
+</kw>
+<status status="PASS" starttime="20230522 03:11:44.573" endtime="20230522 03:11:58.993"/>
+</test>
+<test id="s1-t3" name="Clear up - close" line="79">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230522 03:11:58.994" endtime="20230522 03:11:59.149"/>
+</kw>
+<status status="PASS" starttime="20230522 03:11:58.994" endtime="20230522 03:11:59.150"/>
+</test>
+<status status="PASS" starttime="20230522 03:11:35.892" endtime="20230522 03:11:59.150"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Robot Actions">Robot Actions</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
